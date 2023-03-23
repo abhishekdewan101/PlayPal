@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "407347401109",
+    "project_id": "playpal-ccd4f",
+    "storage_bucket": "playpal-ccd4f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:407347401109:android:e44a3b9f2873ebe9ad669c",
+        "android_client_info": {
+          "package_name": "com.adewan.playpal"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "407347401109-b7mcjuif8ucij1kp08muianf7mv5av22.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.adewan.playpal",
+            "certificate_hash": "c7cfbd96bc32983b9e997d43a51c6fc420c5d1f5"
+          }
+        },
+        {
+          "client_id": "407347401109-ro7qubfbkvm3fmb5v8k6d7j4hpu1sl4j.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBh07k775Mx--Hjj4VGo9Pth_EauiU6b3M"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "407347401109-ro7qubfbkvm3fmb5v8k6d7j4hpu1sl4j.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

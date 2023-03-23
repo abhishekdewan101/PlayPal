@@ -6,7 +6,7 @@ import logcat.LogPriority
 import org.koin.android.ext.koin.androidContext
 import org.koin.core.context.startKoin
 
-class WNApplication : Application() {
+class PlayPalApplication : Application() {
     override fun onCreate() {
         super.onCreate()
 
@@ -15,7 +15,7 @@ class WNApplication : Application() {
 
         // Koin DI
         startKoin {
-            androidContext(this@WNApplication)
+            androidContext(this@PlayPalApplication)
         }
     }
 }

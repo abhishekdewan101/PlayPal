@@ -1,4 +1,4 @@
-package com.adewan.playpal.core.ux.theme
+package com.adewan.playpal.ux.theme
 
 import androidx.compose.ui.graphics.Color
 

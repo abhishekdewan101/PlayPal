@@ -1,4 +1,4 @@
-package com.adewan.playpal.core.ux.utils
+package com.adewan.playpal.ux.utils
 
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.DisposableEffect

@@ -1,6 +1,7 @@
 package com.adewan.playpal
 
 import android.app.Application
+import com.adewan.playpal.features.featureModule
 import logcat.AndroidLogcatLogger
 import logcat.LogPriority
 import org.koin.android.ext.koin.androidContext
@@ -15,6 +16,7 @@ class PlayPalApplication : Application() {
 
         // Koin DI
         startKoin {
+            modules(featureModule, applicationModule)
             androidContext(this@PlayPalApplication)
         }
     }

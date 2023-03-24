@@ -5,6 +5,7 @@ import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.BoxWithConstraints
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.absoluteOffset
@@ -29,8 +30,8 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.adewan.playpal.R
-import com.adewan.playpal.core.ux.theme.AppTheme
-import com.adewan.playpal.core.ux.utils.ChangeSystemUiEffect
+import com.adewan.playpal.ux.theme.AppTheme
+import com.adewan.playpal.ux.utils.ChangeSystemUiEffect
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -39,38 +40,21 @@ fun LoginScreen() {
         statusBarColor = MaterialTheme.colorScheme.background,
         navigationBarColor = MaterialTheme.colorScheme.background
     )
-    Scaffold() { innerPadding ->
+    Scaffold { innerPadding ->
         Column(
             modifier = Modifier.fillMaxSize(),
             horizontalAlignment = Alignment.CenterHorizontally,
             verticalArrangement = Arrangement.Top
         ) {
-            BoxWithConstraints(modifier = Modifier.padding(innerPadding)) {
-                Image(
-                    painter = painterResource(id = R.drawable.controller),
-                    contentDescription = "",
-                    modifier = Modifier.absoluteOffset(x = (-maxWidth / 2), y = (-maxHeight / 6)),
-                    colorFilter = ColorFilter.tint(color = MaterialTheme.colorScheme.primary)
-                )
-                Image(
-                    painter = painterResource(id = R.drawable.controller),
-                    contentDescription = "",
-                    modifier = Modifier
-                        .scale(scaleX = -1f, scaleY = 1f)
-                        .absoluteOffset(x = (-maxWidth / 2), y = (-maxHeight / 6)),
-                    colorFilter = ColorFilter.tint(color = MaterialTheme.colorScheme.secondary)
-                )
-            }
+            HeaderGraphics(innerPadding)
             Text(
                 text = "PlayPal",
                 style = MaterialTheme.typography.displayLarge,
                 fontWeight = FontWeight.SemiBold
             )
             Spacer(modifier = Modifier.padding(top = 100.dp))
-
             FilledTonalButton(
-                onClick = {
-                },
+                onClick = {},
                 modifier = Modifier.fillMaxWidth().padding(horizontal = 20.dp)
             ) {
                 Row(modifier = Modifier.padding(10.dp)) {
@@ -83,8 +67,10 @@ fun LoginScreen() {
                 }
             }
             Spacer(modifier = Modifier.padding(top = 30.dp))
-            FilledTonalButton(onClick = {
-            }, modifier = Modifier.fillMaxWidth().padding(horizontal = 20.dp)) {
+            FilledTonalButton(
+                onClick = {},
+                modifier = Modifier.fillMaxWidth().padding(horizontal = 20.dp)
+            ) {
                 Row(modifier = Modifier.padding(10.dp)) {
                     Icon(
                         Icons.Default.Logout,
@@ -98,6 +84,26 @@ fun LoginScreen() {
                 }
             }
         }
+    }
+}
+
+@Composable
+private fun HeaderGraphics(innerPadding: PaddingValues) {
+    BoxWithConstraints(modifier = Modifier.padding(innerPadding)) {
+        Image(
+            painter = painterResource(id = R.drawable.controller),
+            contentDescription = "",
+            modifier = Modifier.absoluteOffset(x = (-maxWidth / 2), y = (-maxHeight / 6)),
+            colorFilter = ColorFilter.tint(color = MaterialTheme.colorScheme.primary)
+        )
+        Image(
+            painter = painterResource(id = R.drawable.controller),
+            contentDescription = "",
+            modifier = Modifier
+                .scale(scaleX = -1f, scaleY = 1f)
+                .absoluteOffset(x = (-maxWidth / 2), y = (-maxHeight / 6)),
+            colorFilter = ColorFilter.tint(color = MaterialTheme.colorScheme.secondary)
+        )
     }
 }
 

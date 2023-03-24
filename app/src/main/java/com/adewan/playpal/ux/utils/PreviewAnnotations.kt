@@ -1,4 +1,4 @@
-package com.adewan.playpal.core.ux.utils
+package com.adewan.playpal.ux.utils
 
 import android.content.res.Configuration.UI_MODE_NIGHT_NO
 import android.content.res.Configuration.UI_MODE_NIGHT_YES
